@@ -1,325 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Contrato</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #1a1a1a;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><path fill="#ff0080" d="M15 0C7.015 0 0 7.015 0 15s7.015 15 15 15 15-7.015 15-15S22.985 0 15 0zm-3.5 16.25c-1.15 0-2.125-.675-2.125-2.125 0-1.15.675-2.125 2.125-2.125 1.15 0 2.125.675 2.125 2.125 0 1.15-.675 2.125-2.125 2.125zm3.5-9c-1.15 0-2.125-.675-2.125-2.125 0-1.15.675-2.125 2.125-2.125 1.15 0 2.125.675 2.125 2.125 0 1.15-.675 2.125-2.125 2.125z"/></svg>'), auto; /* Define o coração como cursor */
-      background-size: cover; /* Ajusta o fundo para cobrir a tela */
-      animation: fundo-animacao 10s linear infinite; /* Adiciona animação ao fundo */
-    }
-
-    @keyframes fundo-animacao {
-      0% {
-        background-position: 0% 0%;
-      }
-      100% {
-        background-position: 100% 100%;
-      }
-    }
-
-    h1 {
-      color: #ff0080;
-      margin-top: 100px;
-      font-size: 36px;
-    }
-
-    .pedido {
-      margin-bottom: 50px;
-    }
-
-    .botoes {
-      display: flex;
-      justify-content: center;
-      margin-top: 50px;
-    }
-
-    .botao {
-      display: inline-block;
-      padding: 10px 20px;
-      font-size: 20px;
-      background-color: #ff0080;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      margin: 0 10px;
-      transition: transform 0.3s;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    }
-
-    .botao:hover {
-      transform: scale(1.1);
-    }
-
-    .animacao {
-      display: none;
-      margin-top: 50px;
-      font-size: 24px;
-      color: #ff0080;
-      animation: pulsar 2s infinite;
-    }
-
-    @keyframes pulsar {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.2);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-
-    .coracao {
-      position: absolute;
-      font-size: 30px; /* Tamanho do coração */
-      color: #ff0080;
-      animation: explodir 0.5s ease-out forwards;
-      pointer-events: none; /* Impede que o cursor interfira em outros elementos */
-    }
-
-    /* Estilos para corações explodindo com diferentes cores e velocidades */
-    .coracao.vermelho {
-      color: red;
-      animation: explodir-vermelho 1s ease-out forwards;
-    }
-    .coracao.azul {
-      color: blue;
-      animation: explodir-azul 2s ease-out forwards;
-    }
-    .coracao.verde {
-      color: green;
-      animation: explodir-verde 1.5s ease-out forwards;
-    }
-
-    @keyframes explodir {
-      0% {
-        opacity: 1;
-        transform: scale(0);
-      }
-      100% {
-        opacity: 0;
-        transform: scale(1.5);
-      }
-    }
-
-    @keyframes explodir-vermelho {
-      0% {
-        opacity: 1;
-        transform: scale(0);
-      }
-      100% {
-        opacity: 0;
-        transform: scale(2);
-      }
-    }
-
-    @keyframes explodir-azul {
-      0% {
-        opacity: 1;
-        transform: scale(0);
-      }
-      100% {
-        opacity: 0;
-        transform: scale(1.2);
-      }
-    }
-
-    @keyframes explodir-verde {
-      0% {
-        opacity: 1;
-        transform: scale(0);
-      }
-      100% {
-        opacity: 0;
-        transform: scale(1.8);
-      }
-    }
-
-    #nao { /* CSS para o botão "Não" */
-      position: absolute;
-      left: 0;
-      top: 0;
-      transition: transform 0.2s, background-color 0.2s;
-    }
-
-    #nao:hover {
-      transform: scale(1.2);
-      background-color: #f00;
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato de Exclusividade Afetiva</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .accept {
+            background-color: #28a745;
+            color: white;
+        }
+        .decline {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-  <div class="pedido">
-    <h1>Assina esse contrato?</h1>
-  </div>
-  <div class="contrato">
-    <h1>CONTRATO DE EXCLUSIVIDADE AFETIVA
-      Entre as partes:
-      
-      De um lado, , aqui denominado "Parte Interessada", que manifesta o desejo de estabelecer um compromisso especial e exclusivo.
-      
-      Do outro, [Nome Dela], aqui denominada "Parte Interessante", cuja presença tem sido considerada essencial para o bem-estar emocional da Parte Interessada.
-      
-      As partes resolvem firmar o presente contrato, seguindo as cláusulas e condições abaixo:
-      
-      CLÁUSULA 1 – DO OBJETO
-      1.1. O presente contrato tem como objetivo regular a relação entre as partes, garantindo exclusividade afetiva, boas risadas e momentos de alto nível romântico.
-      1.2. O contrato prevê passeios, trocas de mensagens diárias, momentos de carinho e eventuais surpresas inesperadas (mas positivas).
-      
-      CLÁUSULA 2 – DAS OBRIGAÇÕES DAS PARTES
-      2.1. Da Parte Interessada
-      Enviar mensagens fofas sempre que sentir saudades.
-      Planejar encontros que variam entre rolês badalados e programas tranquilos (maratonas de séries inclusas).
-      Fornecer cafunés e abraços de acordo com a necessidade emocional da Parte Interessante.
-      Lembrar datas importantes (sob pena de punição a ser definida pela Parte Interessante).
-      Estar disponível para ouvir sobre o dia da Parte Interessante, independentemente do nível de fofoca envolvido.
-      Ter paciência quando a Parte Interessante demorar para escolher um filme, um restaurante ou qualquer outra decisão difícil.
-      Acompanhar a Parte Interessante em rolês que ela gosta, mesmo que envolvam lojas que a Parte Interessada não tem interesse (com direito a recompensa depois).
-      Respeitar o tempo e espaço da Parte Interessante, sem cobranças excessivas.
-      2.2. Da Parte Interessante
-      Responder mensagens dentro de um tempo razoável para evitar crises existenciais na Parte Interessada.
-      Demonstrar afeto regularmente, seja por palavras, gestos ou sinais enigmáticos, desde que compreensíveis.
-      Enviar memes e figurinhas engraçadas, mantendo a comunicação dinâmica e divertida.
-      Ter paciência com possíveis atitudes emocionadas da Parte Interessada.
-      Avisar a Parte Interessada quando chegar em casa depois de um rolê, para evitar que ele/ela fique preocupado(a).
-      Escolher um lugar para comer em menos de 10 minutos ou, caso demore, aceitar a escolha da Parte Interessada sem reclamar.
-      Aceitar abraços inesperados e beijos aleatórios sem reclamar, independentemente da ocasião.
-      Dar bom-dia, boa-noite e demonstrar saudades em caso de ausência prolongada.
-      CLÁUSULA 3 – DA EXCLUSIVIDADE
-      3.1. As partes concordam que, durante a vigência do contrato, haverá exclusividade afetiva, com compromisso mútuo de não manter diálogos românticos com terceiros.
-      3.2. Qualquer tentativa de "testar o mercado" poderá resultar na aplicação de sanções, incluindo, mas não se limitando a: cara emburrada, mensagens visualizadas sem resposta e possível revogação do direito ao cafuné.
-      
-      CLÁUSULA 4 – DA DURAÇÃO E RESCISÃO
-      4.1. O presente contrato entra em vigor a partir da assinatura (ou aceite via emoji de coração ❤️).
-      4.2. A duração é indeterminada, podendo ser prorrogada indefinidamente mediante consenso de ambas as partes.
-      4.3. A rescisão do contrato está sujeita a uma taxa de término extremamente alta, a ser paga na forma de saudade intensa, arrependimento imediato e desejo de recontratação.
-      
-      CLÁUSULA 5 – DAS PENALIDADES POR DESCUMPRIMENTO
-      5.1. O não cumprimento de obrigações pode resultar em sanções, incluindo:
-      
-      Cobrança de abraços extras para compensação.
-      Obrigação de preparar (ou pedir) comida para a parte prejudicada.
-      Indenização na forma de elogios espontâneos.
-      Punição máxima: ficar sem memes exclusivos da Parte Interessada por tempo indeterminado.
-      CLÁUSULA 6 – DAS DISPOSIÇÕES GERAIS
-      6.1. Este contrato pode ser alterado a qualquer momento, desde que ambas as partes concordem e que a alteração seja acompanhada de um jantar romântico ou um encontro divertido.
-      6.2. Casos omissos deverão ser resolvidos com diálogo e, se necessário, com um chocolate ou sorvete como moeda de negociação.
-      
-      E, POR ESTAREM ASSIM JUSTAS E COMPROMETIDAS, AS PARTES ASSINAM O PRESENTE CONTRATO, CIENTES DE QUE, UMA VEZ ASSINADO, A SAÍDA SERÁ SOMENTE POR CASAMENTO OU OUTRO DOCUMENTO OFICIALMENTE NEGOCIADO.
-      🖊 Assinatura da Parte Interessada: ________________
-      🖊 Assinatura da Parte Interessante: ________________</h1>
-  </div>
-  <div class="botoes">
-    <button id="sim" class="botao">Sim</button>
-    <button id="nao" class="botao">Não</button>
-  </div>
-  <div id="animacao" class="animacao">
-    Parabéns! Você aceitou o contrato. 🎉
-  </div>
+    <div class="container">
+        <h2>Contrato de Exclusividade Afetiva</h2>
+        <p>Ao aceitar este contrato, você concorda com os seguintes termos:</p>
+        <ul style="text-align: left;">
+            <li>Responde mensagens dentro de um tempo razoável.</li>
+            <li>Envia memes e figurinhas regularmente.</li>
+            <li>Abraça e faz cafuné sem moderação.</li>
+            <li>Escolhe um lugar para comer em menos de 10 minutos.</li>
+            <li>Não testa o mercado, pois a exclusividade é garantida.</li>
+        </ul>
+        <p>Você aceita?</p>
+        <div class="buttons">
+            <button class="accept" onclick="aceitou()">Aceitar ❤️</button>
+            <button class="decline" onclick="negou()">Não Aceitar 💔</button>
+        </div>
+    </div>
 
-  <script>
-    const simButton = document.getElementById('sim');
-    const naoButton = document.getElementById('nao');
-    const animacaoDiv = document.getElementById('animacao');
-
-    // Função para mover o botão "Não" aleatoriamente
-    function moverBotaoNao() {
-      const maxX = window.innerWidth - naoButton.offsetWidth;
-      const maxY = window.innerHeight - naoButton.offsetHeight;
-      const newX = Math.floor(Math.random() * maxX);
-      const newY = Math.floor(Math.random() * maxY);
-
-      naoButton.style.left = `${newX}px`;
-      naoButton.style.top = `${newY}px`;
-    }
-
-    // Cria corações ao clicar ou tocar na tela com diferentes estilos
-    function criarCoracao(x, y) {
-      const coracao = document.createElement('div');
-      coracao.classList.add('coracao');
-
-      // Define a cor e a animação do coração aleatoriamente
-      const cores = ['vermelho', 'azul', 'verde'];
-      const corAleatoria = cores[Math.floor(Math.random() * cores.length)];
-      coracao.classList.add(corAleatoria);
-
-      // Define o emoji do coração aleatoriamente
-      const emojis = ['❤️', '🩷', '🧡', '💛', '💚', '💙', '🩵', '💜', '🤎', '🖤', '🩶', '🤍', '❣️', '💕', '💞', '💓', '💗', '💖', '💘', '💝', '💟', '❤️‍🔥', '❤️‍🩹', '🫶', '♥️', '💌'];
-      const emojiAleatorio = emojis[Math.floor(Math.random() * emojis.length)];
-      coracao.textContent = emojiAleatorio;
-
-      coracao.style.left = `${x}px`;
-      coracao.style.top = `${y}px`;
-
-      document.body.appendChild(coracao);
-
-      // Remove o coração após a animação
-      setTimeout(() => {
-        coracao.remove();
-      }, 1500);
-    }
-
-    // Define o fundo da tela com imagem ou gradiente
-    document.body.style.backgroundImage = "url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fheart%2Bbackground&psig=AOvVaw2o0bQ1r99W_zZ8jI_N2O8d&ust=1700525176907000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCNjk99G16_4CFQAAAAAdAAAAABAD') "; // Substitua por sua imagem ou gradiente
-
-    // Temporizador para exibir a frase "Clique aqui!"
-    let timer = setTimeout(() => {
-      alert("Você está demorando muito para responder! 😅");
-      // Aqui você pode adicionar uma nova mensagem, animação ou outra ação
-      // Exemplo:
-      // alert("Você está demorando muito para responder! 😅"); 
-    }, 15000); 
-
-    // Eventos
-    simButton.addEventListener('click', () => {
-      simButton.style.display = 'none';
-      naoButton.style.display = 'none';
-      animacaoDiv.style.display = 'block';
-      clearTimeout(timer);
-    });
-
-    // Move o botão "Não" ao passar o cursor próximo
-    document.addEventListener('mousemove', (e) => {
-      const naoButtonRect = naoButton.getBoundingClientRect();
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
-
-      const distance = Math.sqrt(
-        Math.pow(mouseX - (naoButtonRect.left + naoButtonRect.width / 2), 2) +
-        Math.pow(mouseY - (naoButtonRect.top + naoButtonRect.height / 2), 2)
-      );
-
-      if (distance < 100) {
-        moverBotaoNao();
-      }
-    });
-
-    // Posiciona o botão "Não" ao lado do botão "Sim"
-    naoButton.style.left = `${simButton.offsetLeft + simButton.offsetWidth + 10}px`;
-    naoButton.style.top = `${simButton.offsetTop}px`;
-
-    // Cria corações ao clicar ou tocar na tela com diferentes estilos
-    document.addEventListener('click', (e) => {
-      criarCoracao(e.clientX, e.clientY);
-    });
-
-    document.addEventListener('touchstart', (e) => {
-      const touch = e.touches[0];
-      criarCoracao(touch.clientX, touch.clientY);
-    });
-
-  </script>
+    <script>
+        function aceitou() {
+            alert("Parabéns! O contrato foi firmado com sucesso! Agora você está oficialmente comprometida! ❤️");
+        }
+        function negou() {
+            alert("Poxa, que pena... Mas podemos renegociar os termos! 🤔");
+        }
+    </script>
 </body>
 </html>
